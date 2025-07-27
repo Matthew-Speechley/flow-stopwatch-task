@@ -1,0 +1,61 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #242424;
+  background-color: #fafafa;
+  background-image: radial-gradient(#ccc 1px, transparent 1px);
+  background-size: 20px 20px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 32px 0 12px 0;
+}
+
+time {
+  font-family: monospace;
+}
+
+button {
+  border-radius: 3px;
+  border: 1px solid rgb(39, 9, 220);
+  background-color: white;
+  color: rgb(39, 9, 220);
+  padding: 0.5em 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:disabled {
+  border-color: rgba(39, 9, 220, 0.5);
+  color: rgba(39, 9, 220, 0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+button:hover {
+  background: rgb(244, 243, 253);
+}
+
+@media (min-width: 420px) {
+  button {
+    padding: 0.5em 24px;
+  }
+}
