@@ -59,3 +59,4 @@ The application will be available at `http://localhost:5173`
 
 - I didn't have time to make the chess button interactive unfortunately.
 - Also, if the app was to get any more complex, a global context to share states like isRunning and shouldResetChessTimers would be useful, rather than the current prop drilling. I would use useReducer / useContext for this.
+- Of course, if for production I would have tests and better accessibility considerations.
