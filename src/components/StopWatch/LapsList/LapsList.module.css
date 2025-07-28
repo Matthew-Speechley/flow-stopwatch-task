@@ -1,0 +1,54 @@
+.lapsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  overflow-y: auto;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20px,
+    black calc(100% - 20px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20px,
+    black calc(100% - 20px),
+    transparent
+  );
+}
+
+.lapListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.lapNumber,
+.lapTime {
+  line-height: 1;
+  display: block;
+  vertical-align: top;
+}
+
+.lapNumber {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary);
+  padding-top: 2px;
+}
+
+.lapTime {
+  font-size: 28px;
+  color: var(--text);
+}
+
+.centiseconds {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+}

@@ -1,0 +1,19 @@
+:root {
+  --bg: #fafafa;
+  --text: #000000;
+  --mid-tone: #ccc;
+  --primary: #2709dc;
+  --primary-opaque: rgba(39, 9, 220, 0.5);
+  --button-bg-disabled: rgb(244, 243, 253);
+  --lap-bg: #f9f9f9;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #fafafa;
+  --mid-tone: #ccc;
+  --primary: #4f7ed4;
+  --primary-opaque: rgba(79, 126, 212, 0.5);
+  --button-bg-disabled: #2a2a2a;
+  --lap-bg: #1f1f1f;
+}

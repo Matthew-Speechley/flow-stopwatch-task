@@ -1,0 +1,20 @@
+.bottomButtonsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.svgButton {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.svgButton:hover {
+  background-color: transparent;
+}
+
+.svgButton svg {
+  width: 24px;
+  height: 24px;
+}
