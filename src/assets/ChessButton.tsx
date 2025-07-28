@@ -10,7 +10,8 @@ export default function ChessIcon() {
     >
       <path
         d="M1 44V10.6287C1 4.86633 5.8573 0.296327 11.6089 0.647213L150.375 9.11283L290.396 0.641537C296.146 0.293672 301 4.86295 301 10.6233V44H1Z"
-        stroke="var(--primary)"
+        stroke="var(--border)"
+        stroke-width="1"
         fill="var(--lap-bg)"
       />
     </svg>
