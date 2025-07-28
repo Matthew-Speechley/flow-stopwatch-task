@@ -1,6 +1,6 @@
 # Flow Stopwatch Task
 
-A beautiful and functional stopwatch application built with React and TypeScript.
+A clean and functional stopwatch application built with React and TypeScript.
 
 ## Features
 
@@ -33,7 +33,7 @@ A beautiful and functional stopwatch application built with React and TypeScript
 1. Clone the repository
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/Matthew-Speechley/flow-stopwatch-task.git
 cd flow-stopwatch-task
 ```
 
@@ -58,4 +58,4 @@ The application will be available at `http://localhost:5173`
 ## Feature Wish List
 
 - I didn't have time to make the chess button interactive unfortunately.
-- Also, if the app was to get any more complex, a global context to share the chess mode state would be useful, rather than the current prop drilling. I would use useReducer / useContext for this.
+- Also, if the app was to get any more complex, a global context to share states like isRunning and shouldResetChessTimers would be useful, rather than the current prop drilling. I would use useReducer / useContext for this.
