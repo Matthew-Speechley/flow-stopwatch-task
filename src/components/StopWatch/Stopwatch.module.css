@@ -4,15 +4,21 @@
   align-items: center;
   margin: 10vh 10px;
   background-color: var(--lap-bg);
-  border: 1px solid var(--mid-tone);
+  border: 1px solid var(--border);
   border-radius: 2px;
   padding: 10px;
   max-height: calc(80vh - 20px);
-  max-width: calc(100vw - 20px);
+  max-width: calc(100vw - 40px);
   position: relative;
 }
 
 .buttons {
   display: flex;
   gap: 12px;
+}
+
+@media (min-width: 420px) {
+  .stopwatch {
+    min-width: 360px;
+  }
 }

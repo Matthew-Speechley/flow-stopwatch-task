@@ -2,8 +2,9 @@
   --bg: #fafafa;
   --text: #000000;
   --mid-tone: #ccc;
+  --border: #6a6a6a;
   --primary: #2709dc;
-  --primary-opaque: rgba(39, 9, 220, 0.5);
+  --primary-opaque: #7d67e8;
   --button-bg-disabled: rgb(244, 243, 253);
   --lap-bg: #f9f9f9;
 }
@@ -12,8 +13,9 @@
   --bg: #121212;
   --text: #fafafa;
   --mid-tone: #ccc;
+  --border: #ccc;
   --primary: #4f7ed4;
-  --primary-opaque: rgba(79, 126, 212, 0.5);
+  --primary-opaque: #2a3c67;
   --button-bg-disabled: #2a2a2a;
   --lap-bg: #1f1f1f;
 }

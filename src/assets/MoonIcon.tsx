@@ -2,13 +2,16 @@ export default function MoonIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="var(--primary)"
+      width="32"
+      height="32"
       viewBox="0 0 24 24"
+      fill="none"
+      stroke="var(--primary)"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     >
-      <path
-        d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"
-        transform="scale(1.3) translate(-3 0)"
-      />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
   );
 }

@@ -1,4 +1,4 @@
-export default function SunIcon() {
+export default function StopwatchIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,10 @@ export default function SunIcon() {
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-      <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+      <path d="M5 13a7 7 0 1 0 14 0a7 7 0 0 0 -14 0z" />
+      <path d="M14.5 10.5l-2.5 2.5" />
+      <path d="M17 8l1 -1" />
+      <path d="M14 3h-4" />
     </svg>
   );
 }

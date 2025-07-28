@@ -1,8 +1,8 @@
-interface SaveIconProps {
+interface SwitchIconProps {
   disabled: boolean;
 }
 
-export default function SaveIcon({ disabled }: SaveIconProps) {
+export default function SwitchIcon({ disabled }: SwitchIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,10 +15,8 @@ export default function SaveIcon({ disabled }: SaveIconProps) {
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-      <path d="M12 17v-6" />
-      <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
+      <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
+      <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
     </svg>
   );
 }

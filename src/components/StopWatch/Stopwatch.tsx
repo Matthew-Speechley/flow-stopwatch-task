@@ -3,17 +3,21 @@ import styles from "./Stopwatch.module.css";
 import TimeDisplay from "./TimeDisplay/TimeDisplay";
 import BottomButtons from "./BottomButtons/BottomButtons";
 import LapsList from "./LapsList/LapsList";
+import ChessTimers from "./ChessTimers/ChessTimers";
 
 const Stopwatch = () => {
   const [elapsedTime, setElapsedTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [laps, setLaps] = useState<{ id: number; time: number }[]>([]);
+  const [isChessMode, setIsChessMode] = useState(false);
+  const [shouldResetChess, setShouldResetChess] = useState(false);
 
   const startTimeRef = useRef<number | null>(null);
 
   const start = () => {
     startTimeRef.current = Date.now() - elapsedTime;
     setIsRunning(true);
+    setShouldResetChess(false);
   };
 
   const pause = () => {
@@ -28,6 +32,7 @@ const Stopwatch = () => {
     setElapsedTime(0);
     setLaps([]);
     startTimeRef.current = null;
+    setShouldResetChess(true);
   };
 
   const lap = () => {
@@ -36,6 +41,20 @@ const Stopwatch = () => {
       : elapsedTime;
     const id = Date.now();
     setLaps((prevLaps) => [{ id, time: currentTime }, ...prevLaps]);
+  };
+
+  const toggleChessMode = () => {
+    if (isRunning || elapsedTime > 0) {
+      if (
+        !window.confirm(
+          "This action will reset your stopwatch. Do you want to continue?"
+        )
+      ) {
+        return;
+      }
+    }
+    setIsChessMode(!isChessMode);
+    reset();
   };
 
   return (
@@ -47,16 +66,29 @@ const Stopwatch = () => {
         <button onClick={pause} disabled={!isRunning}>
           pause
         </button>
-        <button onClick={lap} disabled={elapsedTime === 0 && !isRunning}>
-          lap
-        </button>
+        {isChessMode ? null : (
+          <button onClick={lap} disabled={elapsedTime === 0 && !isRunning}>
+            lap
+          </button>
+        )}
         <button onClick={reset} disabled={elapsedTime === 0 && !isRunning}>
           reset
         </button>
       </div>
       <TimeDisplay isRunning={isRunning} initialElapsed={elapsedTime} />
-      <LapsList laps={laps} />
-      <BottomButtons isSaveDisabled={laps.length === 0} laps={laps} />
+
+      {isChessMode ? (
+        <ChessTimers isRunning={isRunning} reset={shouldResetChess} />
+      ) : laps.length === 0 ? null : (
+        <LapsList laps={laps} />
+      )}
+
+      <BottomButtons
+        isSaveDisabled={laps.length === 0}
+        laps={laps}
+        onChessModeToggle={toggleChessMode}
+        isChessMode={isChessMode}
+      />
     </div>
   );
 };

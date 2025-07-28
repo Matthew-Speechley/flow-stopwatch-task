@@ -1,0 +1,52 @@
+.chessTimers {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.inActive {
+  opacity: 0.5;
+}
+
+.centiseconds {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.svgButton {
+  border: none;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.svgButton:hover {
+  background-color: transparent;
+}
+
+.svgButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 420px) {
+  .chessTimers {
+    font-size: 20px;
+    width: 90%;
+  }
+}
+
+.chessButtonContainer {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  left: 0;
+  transform-origin: center;
+  transition: rotate 0.2s ease-in-out;
+  z-index: -1;
+  cursor: pointer;
+}
