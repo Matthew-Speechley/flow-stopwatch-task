@@ -10,14 +10,14 @@ const Stopwatch = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [laps, setLaps] = useState<{ id: number; time: number }[]>([]);
   const [isChessMode, setIsChessMode] = useState(false);
-  const [shouldResetChess, setShouldResetChess] = useState(false);
+  const [shouldResetChessTimers, setShouldResetChessTimers] = useState(false);
 
   const startTimeRef = useRef<number | null>(null);
 
   const start = () => {
     startTimeRef.current = Date.now() - elapsedTime;
     setIsRunning(true);
-    setShouldResetChess(false);
+    setShouldResetChessTimers(false);
   };
 
   const pause = () => {
@@ -32,7 +32,7 @@ const Stopwatch = () => {
     setElapsedTime(0);
     setLaps([]);
     startTimeRef.current = null;
-    setShouldResetChess(true);
+    setShouldResetChessTimers(true);
   };
 
   const lap = () => {
@@ -78,7 +78,7 @@ const Stopwatch = () => {
       <TimeDisplay isRunning={isRunning} initialElapsed={elapsedTime} />
 
       {isChessMode ? (
-        <ChessTimers isRunning={isRunning} reset={shouldResetChess} />
+        <ChessTimers isRunning={isRunning} reset={shouldResetChessTimers} />
       ) : laps.length === 0 ? null : (
         <LapsList laps={laps} />
       )}
